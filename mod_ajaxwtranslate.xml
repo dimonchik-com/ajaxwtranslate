@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" client="site" method="upgrade">
+    <name>AjaxWtranslate</name>
+    <license>Open Source License, GPL v2 based</license>
+    <author>Dmitriy Kupriyanov</author>
+    <authorEmail>ageent.ua@gmail.com</authorEmail>
+    <authorUrl>http://ageent.ru</authorUrl>
+    <creationDate>2010-07-16</creationDate>
+    <version>1.1.0</version>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <description>AJAX_SUCCESSFULLY_INSTALLED</description>
+    <files>
+        <filename module="mod_ajaxwtranslate">mod_ajaxwtranslate.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+    </files>
+
+    <media />
+    <params>
+        <param name="type" type="list" default="fallindown" label="AJAX_TYPE_LABEL" description="AJAX_TYPE_DISCRIPTION">
+            <option value="fallindown">FALLING_DOWN</option>
+            <option value="blackbar">BLACK_BAR</option>
+            <option value="select_list">SELECT_LIST</option>
+            <option value="beautiful_select_list">BEAUTIFUL_SELECT_LIST</option>
+            <option value="justable">JUST_TABLE</option>
+            <option value="only_flag">Only Flag</option>
+            <option value="popupwindows">Popup Windows</option>
+        </param>
+        
+        <param name="fallindow_two" type="list" default="click" label="AJAX_CLICK_OR_MOVE_LABEL" description="AJAX_CLICK_OR_MOVE_DISCRIPTION">
+            <option value="click">CLICK</option>
+            <option value="move_mouse">MOVE_MOUSE</option>
+        </param>
+        
+        <param name="effect" type="list" default="slideDown" label="AJAX_EFFECT_OR_MOVE_LABEL" description="">
+            <option value="slideDown">SLIDE_DOWN</option>
+            <option value="fadeIn">FADEINSE</option>
+        </param>
+        
+        <param name="effect_img" type="list" default="opacity" label="EFFECT_FOR_IMAGE" description="">
+            <option value="opacity">Opacity</option>
+            <option value="move">Change position</option>
+        </param>
+        
+        <param name="hide_panel" type="radio" default="0" label="AJAX_HIDE_PANEL_LABEL" description="AJAX_HIDE_PANEL_DISCRIPTION">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </param>
+        
+        <param name="use_cookie" type="radio" default="2" label="AJAX_USE_COOKIE_LABEL" description="AJAX_USE_COOKIE_DISCRIPTION">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </param>
+        
+        <param name="identify_lang" type="radio" default="0" label="AJAX_SOURCE_LANG_LABEL">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </param>
+        
+        <param name="translator" type="text" size="34" default="Translator" label="AJAX_TRANS_LABEL" description="AJAX_TRANS_LABEL_DISCRIPTION"/>
+        
+        <param name="not_translator" type="text" size="34" default=".example-class,#example-id,#translate_popup" label="AJAX_NOTRANSLATE_LABEL" description="AJAX_NOTRANSLATE_DISCRIPTION"/>
+        
+        <param name="method" type="radio" default="ajax_jquery" label="AJAX_TRANS_METHOD_LABEL" description="AJAX_TRANS_METHOD_DISCRIPTION">
+            <option value="ajax_jquery">AJAX_JQUERY_TRANSLATE</option>
+            <option value="standard">REDIRECT_FROM_GOOGLE</option>
+            <option value="new-windows">REDIRECT_IN_NEW_WINDOWS</option>
+        </param>
+        
+        <param name="show_af" type="radio" default="1" label="AJAX_AFRIKAANS_LABEL" description="AJAX_AFRIKAANS_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_sq" type="radio" default="1" label="AJAX_ALBANIAN_LABEL" description="AJAX_ALBANIAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_ar" type="radio" default="2" label="AJAX_ARABIC_LABEL" description="AJAX_ARABIC_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_hy" type="radio" default="2" label="AJAX_ARMENIAN_LABEL" description="AJAX_ARMENIAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_az" type="radio" default="2" label="AJAX_AZERBAIJANI_LABEL" description="AJAX_AZERBAIJANI_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_eu" type="radio" default="2" label="AJAX_BASQUE_LABEL" description="AJAX_BASQUE_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_be" type="radio" default="2" label="AJAX_BELARUSIAN_LABEL" description="AJAX_BELARUSIAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_bg" type="radio" default="2" label="AJAX_BULGARIAN_LABEL" description="AJAX_BULGARIAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_ca" type="radio" default="2" label="AJAX_CATALAN_LABEL" description="AJAX_CATALAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_zh-CN" type="radio" default="2" label="AJAX_CHINESESIMP_LABEL" description="AJAX_CHINESESIMP_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_zh-TW" type="radio" default="2" label="AJAX_CHINESETRAD_LABEL" description="AJAX_CHINESETRAD_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+                <param name="show_hr" type="radio" default="2" label="AJAX_CROATIAN_LABEL" description="AJAX_CROATIAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_cs" type="radio" default="2" label="AJAX_CZECH_LABEL" description="AJAX_CZECH_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_da" type="radio" default="2" label="AJAX_DANISH_LABEL" description="AJAX_DANISH_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_nl" type="radio" default="2" label="AJAX_DUTCH_LABEL" description="AJAX_DUTCH_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_en" type="radio" default="2" label="AJAX_ENGLISH_LABEL" description="AJAX_ENGLISH_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_et" type="radio" default="2" label="AJAX_ESTONIAN_LABEL" description="AJAX_ESTONIAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_tl" type="radio" default="2" label="AJAX_FILIPINO_LABEL" description="AJAX_FILIPINO_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_fi" type="radio" default="2" label="AJAX_FINNISH_LABEL" description="AJAX_FINNISH_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_fr" type="radio" default="2" label="AJAX_FRENCH_LABEL" description="AJAX_FRENCH_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_gl" type="radio" default="2" label="AJAX_GALICAN_LABEL" description="AJAX_GALICAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+                <param name="show_ka" type="radio" default="2" label="AJAX_GEORGIAN_LABEL" description="AJAX_GEORGIAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_de" type="radio" default="2" label="AJAX_GERMAN_LABEL" description="AJAX_GERMAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_el" type="radio" default="2" label="AJAX_GREEK_LABEL" description="AJAX_GREEK_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_ht" type="radio" default="2" label="AJAX_CREOLE_LABEL" description="AJAX_CREOLE_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_iw" type="radio" default="2" label="AJAX_HEBREW_LABEL" description="AJAX_HEBREW_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_hi" type="radio" default="2" label="AJAX_HINDI_LABEL" description="AJAX_HINDI_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_hu" type="radio" default="2" label="AJAX_HUNGARIAN_LABEL" description="AJAX_HUNGARIAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_is" type="radio" default="2" label="AJAX_ICELANDIC_LABEL" description="AJAX_ICELANDIC_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_id" type="radio" default="2" label="AJAX_INDONESIAN_LABEL" description="AJAX_INDONESIAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_ga" type="radio" default="2" label="AJAX_IRISH_LABEL" description="AJAX_IRISH_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_it" type="radio" default="2" label="AJAX_ITALIAN_LABEL" description="AJAX_ITALIAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_ja" type="radio" default="2" label="AJAX_JAPANESE_LABEL" description="AJAX_JAPANESE_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_ko" type="radio" default="2" label="AJAX_KOREAN_LABEL" description="AJAX_KOREAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_lv" type="radio" default="2" label="AJAX_LATVIAN_LABEL" description="AJAX_LATVIAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_lt" type="radio" default="2" label="AJAX_LITHUANIAN_LABEL" description="AJAX_LITHUANIAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_mk" type="radio" default="2" label="AJAX_MACEDONIAN_LABEL" description="AJAX_MACEDONIAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_ms" type="radio" default="2" label="AJAX_MALAY_LABEL" description="AJAX_MALAY_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_mt" type="radio" default="2" label="AJAX_MALTESE_LABEL" description="AJAX_MALTESE_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_no" type="radio" default="2" label="AJAX_NORWEGIAN_LABEL" description="AJAX_NORWEGIAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_fa" type="radio" default="2" label="AJAX_PERSIAN_LABEL" description="AJAX_PERSIAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_pl" type="radio" default="2" label="AJAX_POLISH_LABEL" description="AJAX_POLISH_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_pt" type="radio" default="2" label="AJAX_PORTUGUESE_LABEL" description="AJAX_PORTUGUESE_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_ro" type="radio" default="2" label="AJAX_ROMANIAN_LABEL" description="AJAX_ROMANIAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_ru" type="radio" default="2" label="AJAX_RUSSIAN_LABEL" description="AJAX_RUSSIAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+                <param name="show_sr" type="radio" default="2" label="AJAX_SERBIAN_LABEL" description="AJAX_SERBIAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_sk" type="radio" default="2" label="AJAX_SLOVAK_LABEL" description="AJAX_SLOVAK_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_sl" type="radio" default="2" label="AJAX_SLOVENIAN_LABEL" description="AJAX_SLOVENIAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_es" type="radio" default="2" label="AJAX_SPANISH_LABEL" description="AJAX_SPANISH_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_sw" type="radio" default="2" label="AJAX_SWAHILI_LABEL" description="AJAX_SWAHILI_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_sv" type="radio" default="2" label="AJAX_SWEDISH_LABEL" description="AJAX_SWEDISH_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_th" type="radio" default="2" label="AJAX_THAI_LABEL" description="AJAX_THAI_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_tr" type="radio" default="2" label="AJAX_TURKISH_LABEL" description="AJAX_TURKISH_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_uk" type="radio" default="2" label="AJAX_UKRAIAN_LABEL" description="AJAX_UKRAIAN_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_ur" type="radio" default="2" label="AJAX_URDU_LABEL" description="AJAX_URDU_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_vi" type="radio" default="2" label="AJAX_VIETNAMES_LABEL" description="AJAX_VIETNAMES_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_cy" type="radio" default="2" label="AJAX_WELSH_LABEL" description="AJAX_WELSH_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        <param name="show_yi" type="radio" default="2" label="AJAX_YIDDISH_LABEL" description="AJAX_YIDDISH_DISCRIPTION">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">AJAX_AS_A_FLAG</option>
+        </param>
+        
+    </params>
+    
+    <params group="other">
+        <param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+        <param name="cache_href" type="radio" default="2" label="AJAX_CACHE_LABEL" description="AJAX_CACHE_DISCRIPTION">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </param>
+    </params>
+    
+    <languages>
+        <language tag="ru-RU">language/ru-RU.mod_ajaxwtranslate.ini</language>
+        <language tag="en-GB">language/en-GB.mod_ajaxwtranslate.ini</language>
+        <language tag="es-ES">language/es-ES.mod_ajaxwtranslate.ini</language>
+        <language tag="it-IT">language/it-IT.mod_ajaxwtranslate.ini</language>
+        <language tag="zh-CN">language/zh-CN.mod_ajaxwtranslate.ini</language>
+        <language tag="sw-SW">language/sw-SW.mod_ajaxwtranslate.ini</language>
+        <language tag="fr-FR">language/fr-FR.mod_ajaxwtranslate.ini</language>
+        <language tag="lt-LT">language/lt-LT.mod_ajaxwtranslate.ini</language>
+    </languages>
+</install>
